@@ -1,14 +1,11 @@
-const { model } = require('mongoose');
-
+const userController =require('../Controllers/users.controller')
 const userRout = require('express').Router();
 
 userRout.get('/',(req,res,next)=>{
 res.send('user');
 });
 
-userRout.post('/',(req,res,next)=>{
-
-});
+userRout.post('/creat', userController.create);
 
 userRout.delete('/',(req,res,next)=>{
 
